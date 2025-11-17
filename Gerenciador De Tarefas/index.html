@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas PRO - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+    <div class="main-layout">
+        
+        <div class="container todo-section">
+            <h1>📅 Meu Planner Diário</h1>
+
+            <div id="input-container">
+                <input type="text" id="task-input" placeholder="Nova tarefa...">
+                <input type="date" id="date-input"> 
+                <button onclick="addTask()">Adicionar</button>
+            </div>
+
+            <ul id="task-list">
+                </ul>
+        </div>
+        
+        <div class="container dashboard-section">
+            <h2>📊 Visão Geral</h2>
+            <div id="stats-summary">
+                <div class="stat-box">
+                    <p class="stat-value" id="total-tasks-stat">0</p>
+                    <p class="stat-label">Total de Tarefas</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-value" id="completed-tasks-stat">0</p>
+                    <p class="stat-label">Concluídas (Mês)</p>
+                </div>
+            </div>
+
+            <h3>Progresso Mensal</h3>
+            <div class="chart-container">
+                <canvas id="monthly-progress-chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
